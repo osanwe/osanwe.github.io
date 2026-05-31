@@ -1,9 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>placeholder</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Directory</title>
+    <style>
+        :root {
+            --bg: #121214;
+            --text: #e1e1e6;
+            --accent: #9b51e0;
+            --card-bg: #1d1d22;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        header {
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .bio {
+            font-size: 1rem;
+            color: #a0a0b1;
+            margin-bottom: 24px;
+        }
+        .social-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .social-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        .section-placeholder {
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .section-placeholder h2 {
+            font-size: 1.2rem;
+            margin: 0 0 8px 0;
+            color: #fff;
+        }
+        .section-placeholder p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #8f8f9d;
+        }
+    </style>
 </head>
 <body>
-    <h1>placeholder</h1>
+
+    <header>
+        <h1>Your Name</h1>
+        <p class="bio">
+            Write your comprehensive full bio here. Explain who you are, what you build, and what readers can expect from your long-form threads. Keep it punchy but fully detailed so Google searchers instantly find exactly what they are looking for when they arrive.
+        </p>
+        
+        <div class="social-links">
+            <a href="https://t.me" target="_blank">✈️ Telegram Channel</a>
+            <a href="https://twitter.com" target="_blank">🐦 Twitter / X</a>
+            <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="section-placeholder">
+            <h2>🔬 Research</h2>
+            <p>Content incoming. Tracking structural logs, notes, and academic focus items here soon.</p>
+        </div>
+
+        <div class="section-placeholder">
+            <h2>✍️ Writing</h2>
+            <p>Content incoming. Compilation of essays, deep-dives, and expanded social threads.</p>
+        </div>
+
+        <div class="section-placeholder">
+            <h2>📷 Photography</h2>
+            <p>Content incoming. Visual archives, gallery series, and street-level imagery logs.</p>
+        </div>
+
+        <div class="section-placeholder">
+            <h2>🧵 Rope</h2>
+            <p>Content incoming. Dedicated structural logs, theory pieces, and technical study projects.</p>
+        </div>
+    </main>
+
 </body>
 </html>
