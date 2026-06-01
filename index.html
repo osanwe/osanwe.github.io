@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petr Vytovtov| ML researcher · writer · photographer · r****r | Belgrade (Serbia) | weather × ML</title>
+    <title>Petr Vytovtov | ML researcher · writer · photographer · r****r | Belgrade (Serbia) | weather × ML</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         :root {
             --bg: #121214;
@@ -23,7 +24,6 @@
         header {
             margin-bottom: 40px;
         }
-        /* New Profile Section Layout */
         .profile-container {
             display: flex;
             align-items: center;
@@ -51,7 +51,7 @@
         }
         .social-links {
             display: flex;
-            gap: 16px;
+            gap: 20px;
             flex-wrap: wrap;
             margin-bottom: 40px;
         }
@@ -60,6 +60,9 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px; /* Spaces icon from text */
         }
         .social-links a:hover {
             text-decoration: underline;
@@ -75,6 +78,9 @@
             font-size: 1.2rem;
             margin: 0 0 8px 0;
             color: #fff;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
         }
         .section-placeholder p {
             margin: 0;
@@ -95,8 +101,7 @@
 
     <header>
         <div class="profile-container">
-            <!-- Ensure src matches your file name exactly (case-sensitive) -->
-            <img src="IMG_20240604_110144_143.jpg" alt="Your Name Profile Picture" class="profile-pic">
+            <img src="IMG_20240604_110144_143.jpg" alt="Profile Picture" class="profile-pic">
             <div class="profile-text">
                 <h1>Petr Vytovtov</h1>
             </div>
@@ -107,31 +112,32 @@
         </p>
         
         <div class="social-links">
-            <a href="https://t.me/justwml" target="_blank">✈️ ML Telegram Channel</a>
-            <a href="https://t.me/osanwe_poems" target="_blank">✈️ Writing Telegram Channel</a>
-            <a href="https://x.com/osanwe" target="_blank">🐦 Twitter / X</a>
-            <a href="https://www.instagram.com/petr.buyan" target="_blank">📸 Instagram</a>
+            <a href="https://t.me/justwml" target="_blank"><i class="fa-brands fa-telegram"></i> ML Telegram Channel</a>
+            <a href="https://t.me/osanwe_poems" target="_blank"><i class="fa-brands fa-telegram"></i> Writing Telegram Channel</a>
+            <a href="https://x.com/osanwe" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter / X</a>
+            <a href="https://www.instagram.com/petr.buyan" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.linkedin.com/in/petr-v-40bab469" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
         </div>
     </header>
 
     <main>
         <div class="section-placeholder">
-            <h2>🔬 Research</h2>
+            <h2><i class="fa-solid fa-microscope"></i> Research</h2>
             <p>Content incoming. Tracking structural logs, notes, and academic focus items here soon. Read my deep dives on <a href="https://substack.com/@osanwe" target="_blank" style="color: var(--accent); text-decoration: underline; font-weight: 500;">Substack</a>.</p>
         </div>
 
         <div class="section-placeholder">
-            <h2>✍️ Writing</h2>
+            <h2><i class="fa-solid fa-pen-nib"></i> Writing</h2>
             <p>Content incoming. Compilation of essays, deep-dives, and expanded social threads.</p>
         </div>
 
         <div class="section-placeholder">
-            <h2>📷 Photography</h2>
+            <h2><i class="fa-solid fa-camera"></i> Photography</h2>
             <p>Content incoming. Visual archives, gallery series, and street-level imagery logs.</p>
         </div>
 
         <div class="section-placeholder">
-            <h2>🧵 Rope</h2>
+            <h2><i class="fa-solid fa-diagram-project"></i> Rope</h2>
             <p>Content incoming. Dedicated structural logs, theory pieces, and technical study projects.</p>
         </div>
     </main>
