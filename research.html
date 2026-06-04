@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petr Vytovtov | Research & Media</title>
+    <style>
+        :root {
+            --bg: #121214;
+            --text: #e1e1e6;
+            --accent: #9b51e0;
+            --card-bg: #1d1d22;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        header {
+            margin-bottom: 30px;
+        }
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        h1 svg { width: 28px; height: 28px; fill: currentColor; }
+        .intro { color: #a0a0b1; margin-bottom: 40px; }
+        
+        .category-title {
+            font-size: 1.1rem;
+            color: #fff;
+            margin: 30px 0 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #29292e;
+            padding-bottom: 5px;
+        }
+        .media-card {
+            background-color: var(--card-bg);
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 6px;
+            border-left: 3px solid var(--accent);
+        }
+        .media-card h3 {
+            margin: 0 0 6px 0;
+            font-size: 1.05rem;
+        }
+        .media-card h3 a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .media-card h3 a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        .media-card p {
+            margin: 0 0 8px 0;
+            font-size: 0.9rem;
+            color: #8f8f9d;
+        }
+        .meta {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Ссылка возврата на главную -->
+        <a href="index.html" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+            Back to Home
+        </a>
+        <h1>
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 12c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg>
+            Research & Media
+        </h1>
+        <p class="intro">Structural logs, technical notes, appearances, and academic focus items.</p>
+    </header>
+
+    <main>
+        <!-- ВЫСТУПЛЕНИЯ / ВИДЕО -->
+        <div class="category-title">🎙️ Meetups & Videos</div>
+<!--
+        <div class="media-card">
+            <h3><a href="https://youtube.com" target="_blank">Название вашего доклада на митапе</a></h3>
+            <p>Краткое описание о чем рассказывали (например: "Архитектура распределенных систем и проблемы консенсуса").</p>
+            <div class="meta">Meetup Name • 2026</div>
+        </div>
+
+        <div class="media-card">
+            <h3><a href="https://youtube.com" target="_blank">Еще одно видео или панельная дискуссия</a></h3>
+            <p>Пара слов о контексте видео, чтобы зашедший из поиска понимал ценность контента.</p>
+            <div class="meta">Conference Name • 2025</div>
+        </div>
+-->
+        <!-- ПОДКАСТЫ -->
+        <div class="category-title">🎧 Podcasts</div>
+<!--
+        <div class="media-card">
+            <h3><a href="https://spotify.com" target="_blank">Название эпизода подкаста в вашей сфере</a></h3>
+            <p>Обсуждение трендов, личного опыта или разбор сложных инженерных / исследовательских кейсов.</p>
+            <div class="meta">Podcast Title • Ep. 42</div>
+        </div>
+-->
+        <!-- ИССЛЕДОВАНИЯ И ПОСТЫ -->
+        <div class="category-title">✍️ Selected Posts & Notes</div>
+<!--
+        <div class="media-card">
+            <h3><a href="https://substack.com" target="_blank">Глубокий технический разбор в Substack</a></h3>
+            <p>Ваш флагманский лонгрид или исследование, которое привело к вам основную аудиторию.</p>
+            <div class="meta">Substack • 5 min read</div>
+        </div>
+-->
+    </main>
+
+</body>
+</html>
