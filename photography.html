@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petr Vytovtov | Photography Gallery</title>
+    <style>
+        :root {
+            --bg: #121214;
+            --text: #e1e1e6;
+            --accent: #9b51e0;
+            --card-bg: #1d1d22;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            max-width: 900px; /* Расширили для красивой многоколонной раскладки */
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        header {
+            margin-bottom: 40px;
+        }
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        h1 svg { width: 28px; height: 28px; fill: currentColor; }
+        .intro { color: #a0a0b1; margin-bottom: 20px; }
+
+        /* Pinterest-раскладка (Masonry) через CSS Columns */
+        .gallery-columns {
+            column-count: 3;
+            column-gap: 20px;
+        }
+        .gallery-item {
+            break-inside: avoid; /* Не дает карточке разрываться между колонками */
+            background-color: var(--card-bg);
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #29292e;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: translateY(-4px);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto; /* Высота автоматическая, чтобы сохранять пропорции вертикальных и горизонтальных фото */
+            display: block;
+        }
+        .gallery-info {
+            padding: 12px;
+        }
+        .gallery-info h3 {
+            margin: 0 0 4px 0;
+            font-size: 0.95rem;
+            color: #fff;
+        }
+        .gallery-info p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #8f8f9d;
+        }
+
+        /* Стиль для Lightbox (модальное окно на весь экран) */
+        .lightbox {
+            display: none; /* Скрыт по умолчанию */
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 10, 12, 0.95);
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: 300;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* Адаптивность колонок под мобильные экраны */
+        @media (max-width: 768px) {
+            .gallery-columns { column-count: 2; }
+        }
+        @media (max-width: 480px) {
+            .gallery-columns { column-count: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+            Back to Home
+        </a>
+        <h1>
+            <svg viewBox="0 0 24 24"><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
+            Photography
+        </h1>
+        <p class="intro">Visual archives, street photography series, and geometry logs.</p>
+    </header>
+
+    <main>
+        <!-- Pinterest сетка колонок -->
+        <div class="gallery-columns">
+            
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="photo0001.jpg" alt="An old house">
+                <div class="gallery-info">
+                    <h3>An old house</h3>
+                    <p>Belgrade, Serbia • 2025</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="photo0002.jpg" alt="A graffiti area">
+                <div class="gallery-info">
+                    <h3>A graffiti area</h3>
+                    <p>Lisbon, Portugal • 2025</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="photo0003.jpg" alt="A night street">
+                <div class="gallery-info">
+                    <h3>A night street</h3>
+                    <p>Lisbon, Portugal • 2025</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="photo0004.jpg" alt="A woman in the fontain">
+                <div class="gallery-info">
+                    <h3>A woman in the fontain</h3>
+                    <p>Barcelona, Spain • 2025</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="photo0005.jpg" alt="At the market">
+                <div class="gallery-info">
+                    <h3>At the market</h3>
+                    <p>Barcelona, Spain • 2025</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="photo0006.jpg" alt="A fall street">
+                <div class="gallery-info">
+                    <h3>A fall street</h3>
+                    <p>Subotica, Serbia • 2025</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="photo0007.jpg" alt="A central neighborhood">
+                <div class="gallery-info">
+                    <h3>A central neighborhood</h3>
+                    <p>Yerevan, Armenia • 2025</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="photo0008.jpg" alt="A garden near the restaurant">
+                <div class="gallery-info">
+                    <h3>A garden near the restaurant</h3>
+                    <p>Bangkok, Thailand • 2025</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="photo0009.jpg" alt="The sunset before new year celebration">
+                <div class="gallery-info">
+                    <h3>The sunset before new year celebration</h3>
+                    <p>Ko Pha-ngan, Thailand • 2025</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="photo0010.jpg" alt="Pelicans on the boat">
+                <div class="gallery-info">
+                    <h3>Pelicans on the boat</h3>
+                    <p>Izmir, Turkey • 2026</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="photo0011.jpg" alt="Evening at the tea house">
+                <div class="gallery-info">
+                    <h3>Evening at the tea house</h3>
+                    <p>Izmir, Turkey • 2026</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="photo0012.jpg" alt="At the Sunday market">
+                <div class="gallery-info">
+                    <h3>At the Sunday market</h3>
+                    <p>Rio de Janeiro, Brazil • 2026</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Окно просмотра на весь экран -->
+    <div id="lightboxViewer" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="Enlarged view">
+    </div>
+
+    <!-- Скрипт для работы Lightbox -->
+    <script>
+        function openLightbox(element) {
+            const imgSrc = element.querySelector('img').src;
+            document.getElementById('lightboxImg').src = imgSrc;
+            document.getElementById('lightboxViewer').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxViewer').classList.remove('active');
+        }
+        
+        // Закрытие по нажатию клавиши Esc
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") closeLightbox();
+        });
+    </script>
+
+</body>
+</html>
