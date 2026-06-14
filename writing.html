@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing & Poetry</title>
+    <style>
+        :root {
+            --bg: #121214;
+            --text: #e1e1e6;
+            --accent: #9b51e0;
+            --card-bg: #1d1d22;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        header {
+            margin-bottom: 40px;
+        }
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        h1 svg { width: 28px; height: 28px; fill: currentColor; }
+        .intro { color: #a0a0b1; margin-bottom: 20px; }
+
+        .category-title {
+            font-size: 1.1rem;
+            color: #fff;
+            margin: 40px 0 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #29292e;
+            padding-bottom: 5px;
+        }
+        .teaser-card {
+            background-color: var(--card-bg);
+            padding: 24px;
+            margin-bottom: 24px;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+        .teaser-card h3 {
+            margin: 0 0 12px 0;
+            font-size: 1.15rem;
+            color: #fff;
+        }
+        .excerpt {
+            font-style: italic;
+            color: #8f8f9d;
+            border-left: 2px solid #29292e;
+            padding-left: 14px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        .tg-invite-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(155, 81, 224, 0.1);
+            color: var(--accent);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+        .tg-invite-btn:hover {
+            background-color: rgba(155, 81, 224, 0.2);
+        }
+        .tg-invite-btn svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+            Back to Home
+        </a>
+        <h1>
+            <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+            Writing
+        </h1>
+        <p class="intro">Selected excerpts, poetry notes, and fiction drafts. Full versions are published directly in the <a href="https://t.me/osanwe_poems" target="_blank" style="color: var(--accent); text-decoration: underline; font-weight: 500;">channel</a>.</p>
+    </header>
+
+    <main>
+        <!-- ПОЭЗИЯ (3 Стихотворения) -->
+        <div class="category-title">📜 Selected Poems</div>
+        
+        <!-- Стих 1 -->
+        <div class="teaser-card">
+            <h3>Солнце встаёт... (1st-2nd of June, 2026)</h3>
+            <div class="excerpt">
+                <p><...></p>
+                <p>Солнце<br><br>
+                Поджигает людей будто свечи<br>
+                Чтоб они плавились<br>
+                Их пот стекал ручейками воска по коже<br>
+                Связывал, как верёвки в шибари<br>
+                Чтобы люди лежали под солнцем<br>
+                И оставили ему свои кости</p>
+                <p><...></p>
+            </div>
+            <!-- Замените ссылку на ваш конкретный пост в TG или просто на канал -->
+            <a href="https://t.me/osanwe_poems/196" target="_blank" class="tg-invite-btn">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.53-1.39.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.46-.42-1.4-.88.03-.24.37-.49 1.03-.74 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.13-.03.19z"/></svg>
+                Read full poem on Telegram
+            </a>
+        </div>
+
+        <!-- Стих 2 -->
+        <div class="teaser-card">
+            <h3>Январский измирский цикл (5th-9th of January, 2026)</h3>
+            <div class="excerpt">
+                <p><...></p>
+                <p>Я не хочу умирать, но я<br>
+                Живу, где шов проходит земли.<br>
+                И если он разойдётся опять,<br>
+                Смогу ли спокойно курить в тени?</p>
+                <p><...></p>
+            </div>
+            <a href="https://t.me/osanwe_poems/182" target="_blank" class="tg-invite-btn">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.53-1.39.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.46-.42-1.4-.88.03-.24.37-.49 1.03-.74 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.13-.03.19z"/></svg>
+                Read full poem on Telegram
+            </a>
+        </div>
+
+        <!-- Стих 3 -->
+        <div class="teaser-card">
+            <h3>Вот ты сидишь... (8th of May, 2025)</h3>
+            <div class="excerpt">
+                <p><...></p>
+                <p>Ведь через день о тебе не вспомнит никто<br>
+                И ты всего лишь среди марширующих<br>
+                В небытие рядов<br>
+                Хоть в этих во́лнах и плыл за буй<br>
+                Но сдох</p>
+            </div>
+            <a href="https://t.me/osanwe_poems/151" target="_blank" class="tg-invite-btn">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.53-1.39.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.46-.42-1.4-.88.03-.24.37-.49 1.03-.74 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.13-.03.19z"/></svg>
+                Read full poem on Telegram
+            </a>
+        </div>
+
+        <!-- ХУДОЖЕСТВЕННАЯ ПРОЗА (1 Отрывок) -->
+        <div class="category-title">📖 Fiction Excerpt</div>
+        
+        <div class="teaser-card">
+            <h3>10 плохих шуток из самолёта Амстердам – Рио-де-Жанейро (18th of April, 2026)</h3>
+            <div class="excerpt">
+                <p><...></p>
+                <p>Есть категория фильмов, которую мне всегда неудобно смотреть в самолёте. Это эротика. И я завидую тем, кто достаёт в самолёте свой мак на 17 дюймов и на фулскрин включает видео, как кто-то занимается сексом. Хотя в Рио же летим. Из Амстердама. Так что нормально, наверное.</p>
+                <p><...></p>
+            </div>
+            <a href="https://t.me/osanwe_poems/190" target="_blank" class="tg-invite-btn">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.53-1.39.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.46-.42-1.4-.88.03-.24.37-.49 1.03-.74 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.13-.03.19z"/></svg>
+                Continue reading on Telegram
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>
